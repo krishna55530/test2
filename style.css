@@ -5,12 +5,11 @@
 }
 
 body {
-  background: url(tank.png);
+  background-image: url(tank.png);
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   background-size: auto;
-
   background-color: lightblue;
 }
 
