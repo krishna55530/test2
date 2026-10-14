@@ -68,7 +68,7 @@ function moveFish(fish) {
          directions[index] = "left";
          fish.style.left = "auto";
          fish.style.right = "0px";
-         fish.style.transform = "scaleX(-1)";
+         fish.style.transform = "scaleX(1)";
          //clearInterval(timerIds[index]);
          //timerIds[index] = setInterval(() => moveFish(fish), 15*id);
       } else {
