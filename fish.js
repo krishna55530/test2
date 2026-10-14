@@ -10,7 +10,7 @@ function startMoving() {
       directions.push("left");
       
       if(!fish.style.right) {
-         fish.style.right = (document.body.clientWidth - 800)/2 + "px"; //"0px"
+         fish.style.right = "0px";
          fish.style.left = "auto";
       }
 
