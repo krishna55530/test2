@@ -12,7 +12,7 @@ body {
   background-attachment: fixed;
   background-size: 800px;*/
   background-color: rgb(255, 243, 229);
-  margin: 0;
+  margin: auto 50px;
   padding-bottom: 50px;
 
   /*display: flex;
@@ -28,6 +28,7 @@ body {
   height: 700px;
   width: 1000px;
   max-width: 100%;
+  max-height: 100%;
   overflow: hidden;
   /*margin: 0 auto 50px;*/
   position: relative;
