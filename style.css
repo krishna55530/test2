@@ -22,7 +22,7 @@ body {
   height: 700px;
   width: 800px;
   overflow: hidden;
-  margin: 100 auto;
+  margin: auto auto 50px;
   postition: relative;
 }
 
