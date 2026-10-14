@@ -1,0 +1,15 @@
+.fish {
+  height: 100px;
+  width: auto;
+  cursor: pointer;
+}
+
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  display: block;
+  margin-bottom: 150px;
+  text-align: center;
+}
