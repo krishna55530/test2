@@ -17,9 +17,13 @@ body {
   border-style: solid;
   border-width: 3px;
   border-top: none;
-  background-image: linear-gradient(to bottom, powderBlue, mediumAquamarine);
+  background-image: linear-gradient(to bottom, lightCyan, mediumAquamarine);
   height: 700px;
   width: 800px;
+
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;
 }
 
 h1 {
