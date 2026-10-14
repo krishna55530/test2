@@ -2,6 +2,7 @@
   height: 100px;
   width: auto;
   cursor: pointer;
+  position: absolute;
 }
 
 body {
@@ -11,21 +12,22 @@ body {
   background-attachment: fixed;
   background-size: 800px;*/
   background-color: rgb(255, 243, 229);
+  margin: 0;
 }
 
 .tank {
-  border-style: solid;
-  border-width: 3px;
+  border: 3px solid black;
   border-top: none;
   background-image: linear-gradient(to bottom, lightCyan, mediumAquamarine);
   height: 700px;
   width: 800px;
-
+  overflow: hidden;
   margin: 100 auto;
+  postition: relative;
 }
 
 h1 {
-  display: block;
+  /*display: block;*/
   margin-bottom: 150px;
   text-align: center;
 }
