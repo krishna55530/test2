@@ -25,8 +25,8 @@ body {
   border: 3px solid black;
   border-top: none;
   background-image: linear-gradient(to bottom, lightCyan, mediumAquamarine);
-  height: 600px;
-  width: 800px;
+  height: 700px;
+  width: 1000px;
   max-width: 100%;
   overflow: hidden;
   /*margin: 0 auto 50px;*/
