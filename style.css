@@ -5,10 +5,13 @@
 }
 
 body {
-  background-color: lightblue;
   background: url(tank.png);
   background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
   background-size: auto;
+
+  background-color: lightblue;
 }
 
 h1 {
