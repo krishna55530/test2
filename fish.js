@@ -8,7 +8,7 @@ function startMoving() {
    for (let fish of fishImages) {
       let id = parseInt(fish.id) || 1;
       directions.push("left");
-      fish.style.position = "absolute";
+      //fish.style.position = "absolute";
       fish.style.right = "0px";
       fish.style.left = "auto";
       
