@@ -6,6 +6,9 @@
 
 body {
   background-color: lightblue;
+  background: url(tank.png);
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 
 h1 {
