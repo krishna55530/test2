@@ -55,6 +55,7 @@ function moveFish(fish) {
          let currentLeft = max - right;
          fish.style.left = currentLeft + "px";
          fish.style.right = "auto";
+         fish.style.transform = 'scaleX(-1)';
          //clearInterval(timerIds[index]);
          //timerIds[index] = setInterval(() => moveFish(fish), 15*id);
       } else {
@@ -67,6 +68,7 @@ function moveFish(fish) {
          directions[index] = "left";
          fish.style.left = "auto";
          fish.style.right = "0px";
+         fish.style.transform = 'scaleX(-1)';
          //clearInterval(timerIds[index]);
          //timerIds[index] = setInterval(() => moveFish(fish), 15*id);
       } else {
