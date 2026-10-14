@@ -10,7 +10,7 @@ body {
   background-position: center;
   background-attachment: fixed;
   background-size: 800px;*/
-  background-color: rgb(255, 216, 255);
+  background-color: rgb(255, 243, 229);
 }
 
 .tank {
@@ -21,9 +21,7 @@ body {
   height: 700px;
   width: 800px;
 
-  display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center;
+  margin: 100 auto;
 }
 
 h1 {
