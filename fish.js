@@ -46,7 +46,7 @@ function moveFish(fish) {
    //let right = parseInt(fish.style.right) || 0;
    //let left = parseInt(fish.style.left) || 0;
    let tank = document.querySelector(".tank");
-   let max = tank.clientWidth - fish.width;
+   let max = tank.clientWidth - fish.offsetWidth;
    
    if(directions[index] === "left") {
       let right = parseFloat(fish.style.right) || 0;
