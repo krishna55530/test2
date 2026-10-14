@@ -13,17 +13,20 @@ body {
   background-size: 800px;*/
   background-color: rgb(255, 243, 229);
   margin: 0;
+  padding-bottom: 50px;
 }
 
 .tank {
+  box-sizing: border-box;
   border: 3px solid black;
   border-top: none;
   background-image: linear-gradient(to bottom, lightCyan, mediumAquamarine);
   height: 700px;
   width: 800px;
+  max-width: 100%;
   overflow: hidden;
-  margin: auto auto 50px;
-  postition: relative;
+  margin: 0 auto 50px;
+  position: relative;
 }
 
 h1 {
