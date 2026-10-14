@@ -45,7 +45,7 @@ function moveFish(fish) {
    let index = id - 1; //array
    //let right = parseInt(fish.style.right) || 0;
    //let left = parseInt(fish.style.left) || 0;
-   let max = document.body.clientWidth - fish.width;
+   let max = (document.body.clientWidth - 800)/2 + 800 - fish.width;
    
    if(directions[index] === "left") {
       let right = parseFloat(fish.style.right) || 0;
@@ -67,7 +67,7 @@ function moveFish(fish) {
       if (left >= max) { //change to depend on tank
          directions[index] = "left";
          fish.style.left = "auto";
-         fish.style.right = "0px";
+         fish.style.right = (document.body.clientWidth - 800)/2 + "px";
          fish.style.transform = "scaleX(1)";
          //clearInterval(timerIds[index]);
          //timerIds[index] = setInterval(() => moveFish(fish), 15*id);
