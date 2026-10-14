@@ -12,8 +12,8 @@ body {
   background-attachment: fixed;
   background-size: 800px;*/
   background-color: rgb(255, 243, 229);
-  margin: auto 50px;
-  padding-bottom: 50px;
+  margin: auto auto 50px auto;
+  /*padding-bottom: 50px;*/
 
   /*display: flex;
   justify-content: center;
