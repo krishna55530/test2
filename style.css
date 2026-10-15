@@ -38,7 +38,8 @@ body {
 }
 
 h1 {
-  /*display: block;*/
-  margin-bottom: 30px;
+  /*display: block;
+  margin-bottom: 30px;*/
+  padding-bottom: 50px;
   text-align: center;
 }
