@@ -16,7 +16,7 @@ function startMoving() {
       fish.style.right = (tank.clientWidth - fish.offsetWidth) + "px";
       fish.style.left = "auto";
       //fish.style.right = "0px";
-      fish.style.bottom = id*80 + "px";
+      fish.style.bottom = id*50 + "px";
       //RANDOMIZE LATER
 
       let timerId = setInterval(() => moveFish(fish), 30);
