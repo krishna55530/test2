@@ -19,7 +19,7 @@ function startMoving() {
       fish.style.bottom = id*80 + "px";
       //RANDOMIZE LATER
 
-      let timerId = setInterval(() => moveFish(fish), 25);
+      let timerId = setInterval(() => moveFish(fish), 30);
       timerIds.push(timerId);
 
       fish.addEventListener("click", changeSpeed);
@@ -35,13 +35,13 @@ function changeSpeed(event) {
     clearInterval(timerIds[index]);
 
     // Temporarily increase the speed
-    timerIds[index] = setInterval(() => moveFish(fish), 12);
+    timerIds[index] = setInterval(() => moveFish(fish), 15);
 
     // Return to the original speed after 3 seconds
     setTimeout(() => {
         clearInterval(timerIds[index]);
 
-        timerIds[index] = setInterval(() => moveFish(fish), 25);
+        timerIds[index] = setInterval(() => moveFish(fish), 30);
     }, 3000);
 }
 
