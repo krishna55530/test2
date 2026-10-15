@@ -7,16 +7,16 @@ function startMoving() {
    let tank = document.querySelector(".tank");
 
    for (let fish of fishImages) {
+      const randomImageNumber = Math.floor(Math.random() * 7) + 1;
+      fish.src = `fish${randomImageNumber}.png`;
+      
       let id = parseInt(fish.id) || 1;
       directions.push("left");
       //fish.style.position = "absolute";
       fish.style.right = (tank.clientWidth - fish.offsetWidth) + "px";
       fish.style.left = "auto";
-      
-      if(!fish.style.right) {
-         fish.style.right = "0px";
-         fish.style.left = "auto";
-      }
+      fish.style.right = "0px";
+      fish.style.bottom = id*12 + "px";
 
       let timerId = setInterval(() => moveFish(fish), 15*id);
       timerIds.push(timerId);
