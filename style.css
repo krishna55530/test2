@@ -12,11 +12,13 @@ body {
   background-attachment: fixed;
   background-size: 800px;*/
   background-color: rgb(255, 243, 229);
-  margin: auto auto 50px auto;
+  margin: 0;
+  max-height: 100vh;
   /*padding-bottom: 50px;*/
 
-  /*display: flex;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  /*justify-content: center;
   align-items: center;*/
 }
 
@@ -25,17 +27,18 @@ body {
   border: 3px solid black;
   border-top: none;
   background-image: linear-gradient(to bottom, lightCyan, mediumAquamarine);
+  
   height: 700px;
   width: 1000px;
   max-width: 100%;
-  max-height: 100%;
+  
   overflow: hidden;
-  /*margin: 0 auto 50px;*/
+  margin: auto auto 50px auto;
   position: relative;
 }
 
 h1 {
-  display: block;
-  margin-bottom: 150px;
+  /*display: block;*/
+  margin-bottom: 0;
   text-align: center;
 }
