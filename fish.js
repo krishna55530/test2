@@ -16,9 +16,9 @@ function startMoving() {
       fish.style.right = (tank.clientWidth - fish.offsetWidth) + "px";
       fish.style.left = "auto";
       fish.style.right = "0px";
-      fish.style.bottom = id*12 + "px";
+      fish.style.bottom = id*80 + "px";
 
-      let timerId = setInterval(() => moveFish(fish), 15*id);
+      let timerId = setInterval(() => moveFish(fish), 25);
       timerIds.push(timerId);
 
       fish.addEventListener("click", changeSpeed);
@@ -34,13 +34,13 @@ function changeSpeed(event) {
     clearInterval(timerIds[index]);
 
     // Temporarily increase the speed
-    timerIds[index] = setInterval(() => moveFish(fish), 7*id);
+    timerIds[index] = setInterval(() => moveFish(fish), 12);
 
     // Return to the original speed after 3 seconds
     setTimeout(() => {
         clearInterval(timerIds[index]);
 
-        timerIds[index] = setInterval(() => moveFish(fish), 15*id);
+        timerIds[index] = setInterval(() => moveFish(fish), 25);
     }, 3000);
 }
 
