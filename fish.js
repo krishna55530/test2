@@ -16,15 +16,16 @@ document.addEventListener("DOMContentLoaded", () => {
         const id = parseInt(fish.id) || 1;
         const index = id - 1;
 
-        fish.style.transform = "scaleX(1)";
+        //fish.style.transform = "scaleX(1)";
+        directions[index] = "right";
 
         // Set initial direction based on the fish image
-        if (randomImageNumber === 1 || randomImageNumber === 3) {
+        /*if (randomImageNumber === 1 || randomImageNumber === 3) {
             directions[index] = "left";
             //fish.style.transform = "scaleX(1)";
         } else {
             directions[index] = "right";
-        }
+        }*/
 
         // Randomly position each fish
         fish.style.top =
