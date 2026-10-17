@@ -58,11 +58,13 @@ function flipFish(fish) {
     const index = id - 1;
 
     if (Math.random() < 0.6) {
-        directions[index] =
-            directions[index] === "left" ? "right" : "left";
-
-        fish.style.transform =
-            directions[index] === "left" ? "scaleX(-1)" : "scaleX(1)";
+        if (directions[index] === "left") {
+            directions[index] = "right";
+            fish.style.transform = "scaleX(1)";
+        } else {
+            directions[index] = "left";
+            fish.style.transform = "scaleX(-1)";
+        }
     }
 }
 
