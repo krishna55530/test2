@@ -16,17 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const id = parseInt(fish.id) || 1;
         const index = id - 1;
 
-        //fish.style.transform = "scaleX(1)";
         directions[index] = "right";
-
-        // Set initial direction based on the fish image
-        /*if (randomImageNumber === 1 || randomImageNumber === 3) {
-            directions[index] = "left";
-            //fish.style.transform = "scaleX(1)";
-        } else {
-            directions[index] = "right";
-        }*/
-
+        
         // Randomly position each fish
         fish.style.top =
             `${Math.random() * Math.max(0, tank.clientHeight - fish.offsetHeight)}px`;
@@ -61,28 +52,6 @@ function startMoving() {
         fish.addEventListener("click", changeSpeed);
     }
 }
-/*
-function flipFish(fish) {
-    const id = parseInt(fish.id) || 1;
-    const index = id - 1;
-
-    // 60% chance to flip
-    if (Math.random() < 0.6) {
-        if(fish.style.transform==="scale(1)"){
-            fish.style.transform = "scale(-1)";
-        } else {
-            fish.style.transform==="scale(1)";
-        }
-        
-        if (directions[index] === "left") {
-            directions[index] = "right";
-            //fish.style.transform = "scaleX(-1)";
-        } else {
-            directions[index] = "left";
-            //fish.style.transform = "scaleX(1)";
-        }
-    }
-}*/
 
 function flipFish(fish) {
     const id = parseInt(fish.id) || 1;
@@ -115,56 +84,6 @@ function changeSpeed(event) {
     }, 3000);
 }
 
-/*function moveFish(fish) {
-    const id = parseInt(fish.id) || 1;
-    const index = id - 1;
-    const tank = document.querySelector(".tank");
-    const max = tank.clientWidth - fish.offsetWidth;
-
-    if(directions[index] === "left") {
-      let right = parseFloat(fish.style.right) || 0;
-      
-      if (right >= max) { //change to depend on tank
-         directions[index] = "right";
-         fish.style.left = (max - right) + "px";
-         //fish.style.left = "0px";
-         fish.style.right = "auto";
-
-        if(fish.style.transform === "scaleX(1)") {
-            fish.style.transform = "scaleX(-1)";
-        } else {
-            fish.style.transform = "scaleX(1)";
-        }
-
-         //fish.style.transform = "scaleX(-1)";
-         //clearInterval(timerIds[index]);
-         //timerIds[index] = setInterval(() => moveFish(fish), 15*id);
-      } else {
-         fish.style.right = (right + 5) + "px";
-      }
-   } else {
-      let left = parseFloat(fish.style.left) || 0;
-   
-      if (left >= max) { //change to depend on tank
-         directions[index] = "left";
-         fish.style.left = "auto";
-         fish.style.right = "0px";
-
-         if(fish.style.transform === "scaleX(1)") {
-            fish.style.transform = "scaleX(-1)";
-        } else {
-            fish.style.transform = "scaleX(1)";
-        }
-
-         //fish.style.transform = "scaleX(-1)"; //1
-         //clearInterval(timerIds[index]);
-         //timerIds[index] = setInterval(() => moveFish(fish), 15*id);
-      } else {
-         fish.style.left = (left + 5) + "px";
-      }
-   }
-}*/
-
 function moveFish(fish) {
     const id = parseInt(fish.id) || 1;
     const index = id - 1;
@@ -173,7 +92,6 @@ function moveFish(fish) {
 
     let left = parseFloat(fish.style.left);
 
-    // Convert right-based positioning to left-based positioning once
     if (fish.style.left === "auto" || fish.style.left === "") {
         left = tank.clientWidth - fish.offsetWidth -
                (parseFloat(fish.style.right) || 0);
