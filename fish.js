@@ -60,7 +60,7 @@ function startMoving() {
         fish.addEventListener("click", changeSpeed);
     }
 }
-
+/*
 function flipFish(fish) {
     const id = parseInt(fish.id) || 1;
     const index = id - 1;
@@ -80,6 +80,19 @@ function flipFish(fish) {
             directions[index] = "left";
             //fish.style.transform = "scaleX(1)";
         }
+    }
+}*/
+
+function flipFish(fish) {
+    const id = parseInt(fish.id) || 1;
+    const index = id - 1;
+
+    if (Math.random() < 0.6) {
+        directions[index] =
+            directions[index] === "left" ? "right" : "left";
+
+        fish.style.transform =
+            directions[index] === "left" ? "scaleX(-1)" : "scaleX(1)";
     }
 }
 
@@ -101,7 +114,7 @@ function changeSpeed(event) {
     }, 3000);
 }
 
-function moveFish(fish) {
+/*function moveFish(fish) {
     const id = parseInt(fish.id) || 1;
     const index = id - 1;
     const tank = document.querySelector(".tank");
@@ -149,27 +162,41 @@ function moveFish(fish) {
          fish.style.left = (left + 5) + "px";
       }
    }
-}
+}*/
 
-/*let left = parseFloat(fish.style.left) || 0;
+function moveFish(fish) {
+    const id = parseInt(fish.id) || 1;
+    const index = id - 1;
+    const tank = document.querySelector(".tank");
+    const max = tank.clientWidth - fish.offsetWidth;
 
-    // Move left
-    if (directions[index] === "left") {
-        left -= step;
+    let left = parseFloat(fish.style.left);
 
-        // Turn around at the left edge
-        if (left <= 0) {
-            left = 0;
-            directions[index] = "right";
-            fish.style.transform = "scaleX(-1)";
-        }
-    } else {
-        // Move right
-        left += step;
+    // Convert right-based positioning to left-based positioning once
+    if (fish.style.left === "auto" || fish.style.left === "") {
+        left = tank.clientWidth - fish.offsetWidth -
+               (parseFloat(fish.style.right) || 0);
+        fish.style.right = "auto";
+        fish.style.left = left + "px";
+    }
 
-        // Turn around at the right edge
+    if (directions[index] === "right") {
+        left += 5;
+
         if (left >= max) {
             left = max;
             directions[index] = "left";
+            fish.style.transform = "scaleX(-1)";
+        }
+    } else {
+        left -= 5;
+
+        if (left <= 0) {
+            left = 0;
+            directions[index] = "right";
             fish.style.transform = "scaleX(1)";
-        }*/
+        }
+    }
+
+    fish.style.left = left + "px";
+}
